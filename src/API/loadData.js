@@ -1,6 +1,6 @@
-import dataFetchReducer from "../reducer/dataFetchReducer";
+import dataFetchReducer from "../redux/reducer/dataFetchReducer";
 import { useState, useReducer, useEffect } from "react";
-import axios from "axios";
+import axios   from "axios";
 
 const loadData = (initialUrl, initialData) => {
     const [url, setUrl] = useState(initialUrl);

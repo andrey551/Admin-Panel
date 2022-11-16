@@ -1,13 +1,14 @@
 import React from 'react'
 import './App.css';
-import Header from './components/layouts/header';
-import Nav from './components/layouts/nav';
+import Dashboard from './pages/dashboard';
+import UserPage from './pages/user/account';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <Header/>
-      <Nav/>
+    <div className="App" style={{width: window.innerWidth}}>
+      <Dashboard/>
     </div>
   );
 }

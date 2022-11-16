@@ -1,33 +1,30 @@
-import React from 'react';
-import SvgColor from '../../../components/svg-color';
-const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />;
 export const DASHBOARD_OPTION = {
-    title: 'dashboard',
+    title: 'Dashboard',
     path: '/dashboard/app',
-    icon: icon('ic_analytics'),
+    icon: require('../../../assets/nav-icon/dashboard.png'),
   }
 export const USER_OPTION = {
-    title: 'user',
+    title: 'User',
     path: '/dashboard/user',
-    icon: icon('ic_user'),
+    icon: require('../../../assets/nav-icon/user.png'),
   }
-export const PRODUCT_OPTION =   {
-    title: 'product',
+export const CATEGORY_OPTION =   {
+    title: 'Category',
     path: '/dashboard/products',
-    icon: icon('ic_cart'),
+    icon: require('../../../assets/nav-icon/product.png')
   }
-export const BLOG_OPTION = {
-    title: 'blog',
+export const QUIZZ_OPTION = {
+    title: 'QUIZZ',
     path: '/dashboard/blog',
-    icon: icon('ic_blog'),
+    icon: require('../../../assets/nav-icon/blog.png'),
   }
 export const LOGIN_OPTION = {
-    title: 'login',
+    title: 'Login',
     path: '/login',
-    icon: icon('ic_lock'),
+    icon: require('../../../assets/nav-icon/login.png'),
   }
 export const FNF = {
     title: 'Not found',
     path: '/404',
-    icon: icon('ic_disabled'),
+    icon: {},
   }
