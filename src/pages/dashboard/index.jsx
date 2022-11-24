@@ -10,6 +10,7 @@ import VerticalBarChart from './VerticalBarChart';
 import UpdateBoard from './UpdateBoard';
 import ProjectTimeline from './ProjectTimeline';
 
+
 const Dashboard = () => {
 
     const cards = [{
@@ -118,8 +119,8 @@ const timeline = {
             <Box flex = {4}>
                 <Box sx={{display: 'block'}}>
                     <Header/>
-                    <Box sx={{backgroundColor:'rgba(64, 142, 145, 0.25)', paddingBottom: 5, maxWidth: '100%'}} >
-                        <Box sx={{marginLeft: 10}}>
+                    <Box sx={{ paddingBottom: 5, maxWidth: '100%', paddingTop: 10}} >
+                        <Box sx={{marginLeft: 5}}>
                             <div style={{display: 'flex'}}>
                                 {cards.map((card) => {
                                     
@@ -127,13 +128,13 @@ const timeline = {
                                 })}                
                             </div>
                             <div style={{display:'flex'}}>
-                              <div style={{maxWidth: 400, backgroundColor: 'rgba(245, 125, 145, 0.19)', marginRight: 50, marginLeft: 25}}>
+                              <div style={{width: 400, backgroundColor: 'rgba(245, 125, 145, 0.19)', marginRight: 25, marginLeft: 25}}>
                                   <DoughnutChart name = "Users by region" data = {usersByRegion} />
                               </div>
-                              <div style={{maxWidth: 400, backgroundColor: 'rgba(245, 125, 145, 0.19)', marginRight: 50}}>
+                              <div style={{width: 320, backgroundColor: 'rgba(245, 125, 145, 0.19)', marginRight: 25}}>
                                   <LineChart data={userByTimeActive} name="Users by time active"/>
                               </div>
-                              <div style={{maxWidth: 400, backgroundColor: 'rgba(245, 125, 145, 0.19)'}}>
+                              <div style={{width: 320, backgroundColor: 'rgba(245, 125, 145, 0.19)'}}>
                                   <LineChart data={userByAge} name = "Users by age"/>
                               </div>
                             </div>

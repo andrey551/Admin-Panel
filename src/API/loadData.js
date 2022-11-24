@@ -3,41 +3,41 @@ import { useState, useReducer, useEffect } from "react";
 import axios   from "axios";
 
 const loadData = (initialUrl, initialData) => {
-    const [url, setUrl] = useState(initialUrl);
+    // const [url, setUrl] = useState(initialUrl);
   
-    const [state, dispatch] = useReducer(dataFetchReducer, {
-      isLoading: false,
-      isError: false,
-      data: initialData,
-    });
+    // const [state, dispatch] = useReducer(dataFetchReducer, {
+    //   isLoading: false,
+    //   isError: false,
+    //   data: initialData,
+    // });
   
-    useEffect(() => {
-      let didCancel = false;
+    // useEffect(() => {
+    //   let didCancel = false;
   
-      const fetchData = async () => {
-        dispatch({ type: 'FETCH_INIT' });
+    //   const fetchData = async () => {
+    //     dispatch({ type: 'FETCH_INIT' });
   
-        try {
-          const result = await axios(url);
+    //     try {
+    //       const result = await axios(url);
   
-          if (!didCancel) {
-            dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
-          }
-        } catch (error) {
-          if (!didCancel) {
-            dispatch({ type: 'FETCH_FAILURE' });
-          }
-        }
-      };
+    //       if (!didCancel) {
+    //         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
+    //       }
+    //     } catch (error) {
+    //       if (!didCancel) {
+    //         dispatch({ type: 'FETCH_FAILURE' });
+    //       }
+    //     }
+    //   };
   
-      fetchData();
+    //   fetchData();
   
-      return () => {
-        didCancel = true;
-      };
-    }, [url]);
+    //   return () => {
+    //     didCancel = true;
+    //   };
+    // }, [url]);
   
-    return [state, setUrl];
+    // return [state, setUrl];
   };
 
   export default loadData;

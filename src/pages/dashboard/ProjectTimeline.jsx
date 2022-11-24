@@ -44,7 +44,7 @@ const NodeColor = (node, current) =>{
         <TimelineDot color="success" />
         </>)
     }
-    if(parseInt(node.node.index) == parseInt(node.current)) {
+    if(parseInt(node.node.index) === parseInt(node.current)) {
         return (
         <>
         <TimelineDot color="warning" />

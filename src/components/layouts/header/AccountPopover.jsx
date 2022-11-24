@@ -5,7 +5,7 @@ import loadData from '../../../API/loadData';
 import { HOME_OPTION, PROFILE_OPTION, SETTING_OPTION } from "../../../redux/layouts/header/AccountOptions";
 const ACCOUNT_OPTIONS = [HOME_OPTION, PROFILE_OPTION, SETTING_OPTION];
 const AccountPopover = () => {
-    const account = loadData('../../../fake_data/account/info.json', {});
+    const account = {};
     const [open, setOpen] = useState(null);
 
     const handleOpen = (event) => {

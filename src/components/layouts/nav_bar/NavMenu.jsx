@@ -8,15 +8,25 @@ const MENU_OPTION = [DASHBOARD_OPTION, USER_OPTION, CATEGORY_OPTION, QUIZZ_OPTIO
 const NavMenu = () => {
     return (
         <>
-        <Container sx={{width: 270, float: 'left', borderRight: 1, minHeight : window.innerHeight, position: 'fixed'}}>
-            <Box sx = {{margin: 3, display: 'flex', alignItems:'center'}}>
+        <Container sx={{width: 280, float: 'left', borderRight: '1px dashed rgba(0, 0, 0, 0.14)', minHeight : window.innerHeight, position: 'fixed'}}>
+            <div style={{paddingTop: 30}}>
+                    <img src={require("../../../assets/logo/Boost_logo.png")} style={{width: 80, float: 'left'}}/>
+            </div>
+            <div style = {{padding: 10,paddingTop: 20, paddingBottom: 20, display: 'flex', alignItems:'center', marginTop: 50, marginBottom: 30, backgroundColor: 'rgba(0, 0, 0, 0.05)', borderRadius: 10}}>
                 <div>
-                    <Avatar sx={{float: 'center'}} src={'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Mangekyou_Sharingan_Itachi.svg/1200px-Mangekyou_Sharingan_Itachi.svg.png'}/>
+                    <Avatar sx={{float: 'center', width: 35, height: 35}} src={'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Mangekyou_Sharingan_Itachi.svg/1200px-Mangekyou_Sharingan_Itachi.svg.png'}/>
                 </div>
-                <text style={{paddingLeft: 3, fontWeight:'bold'}}>Tuan Anh Dau</text>
-            </Box>
+                <div style ={{display: 'block', marginLeft: 20}}>
+                    <div>
+                        <span style={{fontSize: 15}}><b>Tuan Anh Dau</b></span>
+                    </div>
+                    <div>
+                        <span style={{float: 'left'}}>Admin</span>
+                    </div>
+                </div>
+            </div>
             <Divider/>
-            <Box sx={{float: 'left', marginLeft: 3, marginTop: 5}}>
+            <Box sx={{float: 'left', marginTop: 5}}>
             <Stack>
             {MENU_OPTION.map((option) => (
                 <div style={{alignItems:'center'}}>

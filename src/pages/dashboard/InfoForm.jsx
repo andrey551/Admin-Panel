@@ -16,14 +16,22 @@ import PropTypes from 'prop-types';
 const InfoForm = ({cardInfo}) => {
     return (
         <>
-            <Card sx={{minWidth:300,maxHeight:200, margin: 3 , backgroundColor: 'rgba(57, 33, 208, 0.39)'}} variant='outlined'>
-            <CardHeader title={cardInfo.title} />
+            <Card sx={{minWidth:350, maxHeight:180, marginRight: 4, marginBottom: 4, display: 'grid' , backgroundColor: 'rgba(57, 33, 208, 0.39)'}} variant='outlined'>
             <CardContent sx={{display: 'block'}}>
-                <Box sx={{display:'flex', alignItems:'center'}}>
-                   {drawChange(cardInfo.isIncrease)} 
-                   <Typography>{cardInfo.percent}</Typography>
-                   <Box sx={{marginLeft: 4}}>
-                        <h2>{cardInfo.total}</h2>
+                <Box >
+                    <b style={{fontSize: 20}}>{cardInfo.title}</b>
+                </Box>
+                <Box sx={{display: 'grid'}}>
+                    <Box sx={{float: 'left', display: 'flex',marginLeft: 2 ,  alignItems: 'center'}}>
+                        <Box>
+                            {drawChange(cardInfo.isIncrease)} 
+                        </Box>
+                        <Box>
+                            <Typography>{cardInfo.percent}</Typography>
+                        </Box>
+                   </Box>
+                   <Box sx={{marginLeft: 4 }}>
+                        <b style={{float: 'left', fontSize: 47, marginTop: 15}}>{cardInfo.total}</b>
                     </Box>
                 </Box>
             </CardContent>

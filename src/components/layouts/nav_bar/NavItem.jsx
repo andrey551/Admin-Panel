@@ -4,12 +4,12 @@ import Button from '@mui/material/Button';
 
 const NavItem = ({icon, title}) => {
     return (
-        <Button sx={{marginRight: 6, paddingTop: 2, paddingBottom: 2,  borderRadius: '10px'}} style={{justifyContent: "flex-start"}} fullWidth>
+        <Button sx={{ paddingTop: 2, paddingBottom: 2,  borderRadius: '10px', paddingRight: 10}} style={{justifyContent: "flex-start"}} fullWidth>
             <div style={{paddingRight: 20}}>
                 <img width={30} src={icon}/>
             </div>
             <div>
-                <text style={{fontWeight:'bold'}}>{title}</text>
+                <b>{title}</b>
             </div>
         </Button>
     )

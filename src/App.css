@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 .App {
   text-align: center;
+}
+
+body {
+  font-family: 'Josefin Sans', cursive;
 }
 
 .App-logo {
